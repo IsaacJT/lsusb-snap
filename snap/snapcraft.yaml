@@ -5,6 +5,10 @@ summary: Snapped version of lsusb for use on Ubuntu Core
 description: |
   Unofficial lsusb snap
 confinement: strict
+contact: isaac.true@canonical.com
+issues: https://github.com/IsaacJT/lsusb-snap/issues
+source-code: https://github.com/IsaacJT/lsusb-snap
+license: GPL-2
 
 parts:
   lsusb:
