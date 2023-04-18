@@ -8,7 +8,7 @@ confinement: strict
 contact: isaac.true@canonical.com
 issues: https://github.com/IsaacJT/lsusb-snap/issues
 source-code: https://github.com/IsaacJT/lsusb-snap
-license: GPL-2
+license: GPL-2.0
 
 parts:
   lsusb:
