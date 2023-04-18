@@ -1,0 +1,24 @@
+name: itrue-lsusb
+base: core22
+adopt-info: lsusb
+summary: Snapped version of lsusb for use on Ubuntu Core
+description: |
+  Unofficial lsusb snap
+confinement: strict
+
+parts:
+  lsusb:
+    plugin: nil
+    stage-packages:
+      - usbutils:${CRAFT_TARGET_ARCH}
+    override-build: |
+      craftctl default
+      craftctl set version=$(apt info usbutils:${CRAFT_TARGET_ARCH} | awk '{ if ($1 == "Version:") print $2;}' | cut -f 2 -d:)
+      craftctl set grade=stable
+
+apps:
+  itrue-lsusb:
+    command: usr/bin/lsusb
+    plugs:
+      - raw-usb
+
